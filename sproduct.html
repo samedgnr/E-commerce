@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>TechMart</title>
+  <title>FoodMart</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 
 <body>
@@ -103,8 +102,6 @@
   </div>
 
 
-  
-
   <!-- sepet start -->
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
     <div class="offcanvas-header justify-content-center">
@@ -121,13 +118,12 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between">
             <div><span>Total (USD)</span>
-              <strong  class="total">$<p id="total-price">0</p></strong>
+              <strong class="total">$0</strong>
             </div>
           </li>
         </ul>
-        
 
-        <button class="w-100 btn btn-primary btn-" type="submit">Continue to checkout</button>
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
       </div>
     </div>
   </div>
@@ -174,10 +170,9 @@
             <div class="col-md-4 d-none d-md-block">
               <select class="form-select border-0 bg-transparent">
                 <option>All Categories</option>
-                <option>Laptop</option>
-                <option>Phone</option>
-                <option>Tv</option>
-                <option>Headphones</option>
+                <option>Groceries</option>
+                <option>Drinks</option>
+                <option>Chocolates</option>
               </select>
             </div>
             <div class="col-11 col-md-7">
@@ -238,443 +233,18 @@
               <h5 class="mb-0"><span id="cart-total-header" class="cart-total">$0</span></h5>
             </button>
           </div>
-
         </div>
+        
+
       </div>
+
+    </div>
+    </div>
   </header>
   <!-- header end -->
 
 
-  <!-- slider start -->
-  <section class="py-3"
-    style="background-image: url('images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
 
-          <div class="banner-blocks">
-
-            <div class="banner-ad large bg-info block-1">
-
-              <div class="swiper main-swiper">
-                <div class="swiper-wrapper">
-
-                  <div class="swiper-slide">
-                    <div class="row banner-content p-5">
-                      <div class="content-wrapper col-md-7">
-                        <div class="categories mb-3 pb-3">Techmart</div>
-                        <h3 class="banner-title">Computer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop
-                          collection</a>
-                      </div>
-                      <div class="img-wrapper col-md-5">
-                        <img src="images/laptop.png" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="row banner-content p-5">
-                      <div class="content-wrapper col-md-7">
-                        <div class="categories mb-3 pb-3">Techmart</div>
-                        <h3 class="banner-title">Phone </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop
-                          collection</a>
-                      </div>
-                      <div class="img-wrapper col-md-5">
-                        <img src="images/phone.png" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="row banner-content p-5">
-                      <div class="content-wrapper col-md-7">
-                        <div class="categories mb-3 pb-3">Techmart</div>
-                        <h3 class="banner-title">Television</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop
-                          collection</a>
-                      </div>
-                      <div class="img-wrapper col-md-5">
-                        <img src="images/tv.png" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-
-              </div>
-            </div>
-
-            <div class="banner-ad bg-success block-2"
-              style="background:url('images/greenbg.jpg') no-repeat;background-position: right bottom">
-              <div class="row banner-content p-5">
-                <div class="content-wrapper col-md-7">
-                  <div class="categories sale mb-3 pb-3">20% off</div>
-                  <h3 class="banner-title">Accessory</h3>
-                  <a href="#" class="d-flex align-items-center nav-link">shop collection <svg width="24" height="24">
-                      <use xlink:href="#arrow-right"></use>
-                    </svg></a>
-                </div>
-                <div class="img-wrapper col-md-5">
-                  <img src="images/camera.png" alt="camera" width="130px" height="130px">
-                </div>
-                
-
-
-
-              </div>
-            </div>
-
-            <div class="banner-ad bg-danger block-3"
-              style="background:url('images/tbg.jpg') no-repeat;background-position: right bottom">
-              <div class="row banner-content p-5">
-
-                <div class="content-wrapper col-md-7">
-                  <div class="categories sale mb-3 pb-3">15% off</div>
-                  <h3 class="item-title">Baked Products</h3>
-                  <a href="#" class="d-flex align-items-center nav-link">shop collection <svg width="24" height="24">
-                      <use xlink:href="#arrow-right"></use>
-                    </svg></a>
-                </div>
-                <div class="img-wrapper col-md-5">
-                  <img src="images/headphones.png" alt="headphones" width="150px" height="150px">
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- / Banner Blocks -->
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- slider end -->
-
-
-  <!-- Category start -->
-  <section class="py-5 overflow-hidden">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="section-header d-flex justify-content-between mb-5">
-            <h2 class="section-title">Category</h2>
-
-            <div class="d-flex align-items-center">
-              <a href="#" class="btn-link text-decoration-none">View All Categories →</a>
-              <div class="swiper-buttons">
-                <button class="swiper-prev category-carousel-prev btn btn-yellow">❮</button>
-                <button class="swiper-next category-carousel-next btn btn-yellow">❯</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="category-carousel swiper">
-            <div class="swiper-wrapper">
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/laptop.png" width="35" height="35">
-                <h3 class="category-title">Computer</h3>
-              </a>
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/phone.png " width="35" height="35">
-                <h3 class="category-title">Phones</h3>
-              </a>
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/tv.png " width="35" height="35">
-                <h3 class="category-title">Tv</h3>
-              </a>
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/headphones.png " width="35" height="35">
-                <h3 class="category-title">Headphones</h3>
-              </a>
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/mouse.png " width="35" height="35">
-                <h3 class="category-title">Mouse</h3>
-              </a>
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/keyboard.png " width="35" height="35">
-                <h3 class="category-title">Keyboard</h3>
-              </a>
-              <a href="category.html" class="nav-link category-item swiper-slide">
-                <img src="images/camera.png " width="35" height="35">
-                <h3 class="category-title">Camera</h3>
-              </a>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Category end -->
-
-
-
-  <!-- Trending Products start  -->
-  <section class="py-5">
-    <div class="container-fluid">
-
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="bootstrap-tabs product-tabs">
-            <div class="tabs-header d-flex justify-content-between border-bottom my-5">
-              <h3>Trending Products</h3>
-              <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <a class="nav-link text-uppercase fs-6 active" id="nav-all-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-all" type="button">All</a>
-                  <a class="nav-link text-uppercase fs-6" id="nav-fruits-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-fruits" type="button">Computer & Phones</a>
-                  <a class="nav-link text-uppercase fs-6" id="nav-juices-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-juices" type="button">Accessory</a>
-                </div>
-              </nav>
-            </div>
-            <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
-
-                <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" id="trend-item">
-
-                </div>
-                <!-- / product-grid -->
-
-              </div>
-
-              <div class="tab-pane fade" id="nav-fruits" role="tabpanel" aria-labelledby="nav-fruits-tab">
-
-                <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" id="trend-category1">
-
-                </div>
-                <!-- / product-grid -->
-
-              </div>
-              <div class="tab-pane fade" id="nav-juices" role="tabpanel" aria-labelledby="nav-juices-tab">
-
-                <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" id="trend-category2">
-
-                </div>
-                <!-- / product-grid -->
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Trending Products end  -->
-
-
-
-  <div id="p-preview" class="product-preview">
-    <div class="sp-container">
-      <div id="s-product" class="single-product">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Best selling products start -->
-  <section class="py-5 overflow-hidden">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="section-header d-flex justify-content-between my-5">
-
-            <h2 class="section-title">Best selling products</h2>
-
-            <div class="d-flex align-items-center">
-              <a href="#" class="btn-link text-decoration-none">View All Categories →</a>
-              <div class="swiper-buttons">
-                <button class="swiper-prev category-carousel-prev btn btn-yellow">❮</button>
-                <button class="swiper-next category-carousel-next btn btn-yellow">❯</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          
-          <div class="products-carousel swiper">
-            <div class="swiper-wrapper" id="shop">
-
-            </div>
-          </div>
-          <!-- / products-carousel -->
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Best selling products end -->
-
-
-
-  <section class="py-5">
-    <div class="container-fluid">
-
-      <div class="bg-secondary py-5 my-5 rounded-5"
-        style="background: url('images/bg-leaves-img-pattern.png') no-repeat;">
-        <div class="container my-5">
-          <div class="row">
-            <div class="col-md-6 p-5">
-              <div class="section-header">
-                <h2 class="section-title display-4">Get <span class="text-primary">25% Discount</span> on your first
-                  purchase</h2>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst amet, metus, sit massa posuere
-                maecenas. At tellus ut nunc amet vel egestas.</p>
-            </div>
-            <div class="col-md-6 p-5">
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control form-control-lg" name="name" id="name" placeholder="Name">
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Email</label>
-                  <input type="email" class="form-control form-control-lg" name="email" id="email"
-                    placeholder="abc@mail.com">
-                </div>
-                <div class="form-check form-check-inline mb-3">
-                  <label class="form-check-label" for="subscribe">
-                    <input class="form-check-input" type="checkbox" id="subscribe" value="subscribe">
-                    Subscribe to the newsletter</label>
-                </div>
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-dark btn-lg">Submit</button>
-                </div>
-              </form>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- açıklama start -->
-  <section class="py-5">
-    <div class="container-fluid">
-      <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5">
-        <div class="col">
-          <div class="card mb-3 border-0">
-            <div class="row">
-              <div class="col-md-2 text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M21.5 15a3 3 0 0 0-1.9-2.78l1.87-7a1 1 0 0 0-.18-.87A1 1 0 0 0 20.5 4H6.8l-.33-1.26A1 1 0 0 0 5.5 2h-2v2h1.23l2.48 9.26a1 1 0 0 0 1 .74H18.5a1 1 0 0 1 0 2h-13a1 1 0 0 0 0 2h1.18a3 3 0 1 0 5.64 0h2.36a3 3 0 1 0 5.82 1a2.94 2.94 0 0 0-.4-1.47A3 3 0 0 0 21.5 15Zm-3.91-3H9L7.34 6H19.2ZM9.5 20a1 1 0 1 1 1-1a1 1 0 0 1-1 1Zm8 0a1 1 0 1 1 1-1a1 1 0 0 1-1 1Z" />
-                </svg>
-              </div>
-              <div class="col-md-10">
-                <div class="card-body p-0">
-                  <h5>Free delivery</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-3 border-0">
-            <div class="row">
-              <div class="col-md-2 text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M19.63 3.65a1 1 0 0 0-.84-.2a8 8 0 0 1-6.22-1.27a1 1 0 0 0-1.14 0a8 8 0 0 1-6.22 1.27a1 1 0 0 0-.84.2a1 1 0 0 0-.37.78v7.45a9 9 0 0 0 3.77 7.33l3.65 2.6a1 1 0 0 0 1.16 0l3.65-2.6A9 9 0 0 0 20 11.88V4.43a1 1 0 0 0-.37-.78ZM18 11.88a7 7 0 0 1-2.93 5.7L12 19.77l-3.07-2.19A7 7 0 0 1 6 11.88v-6.3a10 10 0 0 0 6-1.39a10 10 0 0 0 6 1.39Zm-4.46-2.29l-2.69 2.7l-.89-.9a1 1 0 0 0-1.42 1.42l1.6 1.6a1 1 0 0 0 1.42 0L15 11a1 1 0 0 0-1.42-1.42Z" />
-                </svg>
-              </div>
-              <div class="col-md-10">
-                <div class="card-body p-0">
-                  <h5>100% secure payment</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-3 border-0">
-            <div class="row">
-              <div class="col-md-2 text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M22 5H2a1 1 0 0 0-1 1v4a3 3 0 0 0 2 2.82V22a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-9.18A3 3 0 0 0 23 10V6a1 1 0 0 0-1-1Zm-7 2h2v3a1 1 0 0 1-2 0Zm-4 0h2v3a1 1 0 0 1-2 0ZM7 7h2v3a1 1 0 0 1-2 0Zm-3 4a1 1 0 0 1-1-1V7h2v3a1 1 0 0 1-1 1Zm10 10h-4v-2a2 2 0 0 1 4 0Zm5 0h-3v-2a4 4 0 0 0-8 0v2H5v-8.18a3.17 3.17 0 0 0 1-.6a3 3 0 0 0 4 0a3 3 0 0 0 4 0a3 3 0 0 0 4 0a3.17 3.17 0 0 0 1 .6Zm2-11a1 1 0 0 1-2 0V7h2ZM4.3 3H20a1 1 0 0 0 0-2H4.3a1 1 0 0 0 0 2Z" />
-                </svg>
-              </div>
-              <div class="col-md-10">
-                <div class="card-body p-0">
-                  <h5>Quality guarantee</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-3 border-0">
-            <div class="row">
-              <div class="col-md-2 text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M12 8.35a3.07 3.07 0 0 0-3.54.53a3 3 0 0 0 0 4.24L11.29 16a1 1 0 0 0 1.42 0l2.83-2.83a3 3 0 0 0 0-4.24A3.07 3.07 0 0 0 12 8.35Zm2.12 3.36L12 13.83l-2.12-2.12a1 1 0 0 1 0-1.42a1 1 0 0 1 1.41 0a1 1 0 0 0 1.42 0a1 1 0 0 1 1.41 0a1 1 0 0 1 0 1.42ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z" />
-                </svg>
-              </div>
-              <div class="col-md-10">
-                <div class="card-body p-0">
-                  <h5>guaranteed savings</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-3 border-0">
-            <div class="row">
-              <div class="col-md-2 text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M18 7h-.35A3.45 3.45 0 0 0 18 5.5a3.49 3.49 0 0 0-6-2.44A3.49 3.49 0 0 0 6 5.5A3.45 3.45 0 0 0 6.35 7H6a3 3 0 0 0-3 3v2a1 1 0 0 0 1 1h1v6a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-6h1a1 1 0 0 0 1-1v-2a3 3 0 0 0-3-3Zm-7 13H8a1 1 0 0 1-1-1v-6h4Zm0-9H5v-1a1 1 0 0 1 1-1h5Zm0-4H9.5A1.5 1.5 0 1 1 11 5.5Zm2-1.5A1.5 1.5 0 1 1 14.5 7H13ZM17 19a1 1 0 0 1-1 1h-3v-7h4Zm2-8h-6V9h5a1 1 0 0 1 1 1Z" />
-                </svg>
-              </div>
-              <div class="col-md-10">
-                <div class="card-body p-0">
-                  <h5>Daily offers</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- açıklama end -->
 
 
   <!-- footer start -->
@@ -751,6 +321,9 @@
               <li class="menu-item">
                 <a href="#" class="nav-link">Affiliate Programme</a>
               </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Ultras Press</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -770,10 +343,40 @@
               <li class="menu-item">
                 <a href="#" class="nav-link">Returns & Refunds</a>
               </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Cookie Guidelines</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Delivery Information</a>
+              </li>
             </ul>
           </div>
         </div>
-
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Customer Service</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">FAQ</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Privacy Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Returns & Refunds</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Cookie Guidelines</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Delivery Information</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="footer-menu">
             <h5 class="widget-title">Subscribe Us</h5>
@@ -795,12 +398,17 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6 copyright">
-          <p>© 2023 Techmart. All rights reserved.</p>
+          <p>© 2023 Foodmart. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 credit-link text-end">
+          <p>Free HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a></p>
         </div>
       </div>
     </div>
   </div>
   <!-- footer end -->
+
+
 
 
   <script src="js/jquery-1.11.0.min.js"></script>

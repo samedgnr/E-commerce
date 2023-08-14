@@ -1069,9 +1069,10 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    color:#ffc600;
     gap: 4px;
     padding: 10px 24px;
-    font-size: 16px;
+    font-size: 100px;
     font-weight: 500;
 }
 .product-btn-group .buy-now{
@@ -1590,3 +1591,12 @@ h1,h2,h3,h4,h5,h6 {
   top: 2px;
 }
 
+#btn-add-to-card{
+  font-size: 16px;
+  height: 40px; 
+  border-radius: 50px;
+  margin-top: 23px;
+}
+#btn-cart-qua{
+  border:none
+}

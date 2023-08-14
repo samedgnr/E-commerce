@@ -2,7 +2,7 @@
 let shop = document.getElementById("shop");
 let listCard = document.getElementById("card-list");
 let total = document.querySelector(".total");
-let quantity = document.getElementById("quantity");
+let quantity = document.getElementById("cart-count");
 let trendProduct = document.getElementById("trend-item");
 let trendCategory1 = document.getElementById("trend-category1");
 let trendCategory2 = document.getElementById("trend-category2");
@@ -157,30 +157,10 @@ function initApp() {
               <use xlink:href="#star-solid"></use>
             </svg> ${value.rating}</span>
           <span class="price">$${value.price}</span>
+          
           <div class="d-flex align-items-center justify-content-between">
-            <div class="input-group product-qty">
-              <span class="input-group-btn">
-                <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus"
-                  data-field="">
-                  <svg width="16" height="16">
-                    <use xlink:href="#minus"></use>
-                  </svg>
-                </button>
-              </span>
-              
-              <input type="text" id="quantity" name="quantity" class="form-control input-number" value=1
-                min="1" max="100">
-              <span class="input-group-btn">
-                <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus"
-                  data-field="">
-                  <svg width="16" height="16">
-                    <use xlink:href="#plus"></use>
-                  </svg>
-                </button>
-              </span>
-            </div>
-            <button class="cart-button">
-          <i onclick="addToCard(${key})" class="fa-regular fa-cart-shopping">Add to Cart</i>
+            <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
+            <div onclick="addToCard(${key})" ><i class='bx bxs-cart'></i> Add to Cart</div>
         </button>
           </div>
         </div>
@@ -213,33 +193,14 @@ function initTrend() {
             <use xlink:href="#star-solid"></use>
           </svg>${value.rating}</span>
         <span class="price">$${value.price}</span>
+        <br>
         <div class="d-flex align-items-center justify-content-between">
-          <div class="input-group product-qty">
-            <span class="input-group-btn">
-              <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                data-type="minus" data-field="">
-                <svg width="16" height="16">
-                  <use xlink:href="#minus"></use>
-                </svg>
-              </button>
-            </span>
-            <input type="text" id="quantity" name="quantity" class="form-control input-number" value=1
-              min="1" max="100">
-            <span class="input-group-btn">
-              <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                data-type="plus" data-field="">
-                <svg width="16" height="16">
-                  <use xlink:href="#plus"></use>
-                </svg>
-              </button>
-            </span>
-          </div>
-          <button class="cart-button">
-          <i onclick="addToCard(${key})" class="fa-regular fa-cart-shopping">Add to Cart</i>
-        </button>
+          
+        <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
+        <div onclick="addToCard(${key})" ><i class='bx bxs-cart'></i> Add to Cart</div>
+      </button>
         </div>
       </div>
-    </div>
         `;
     trendProduct.appendChild(newDiv);
   })
@@ -268,33 +229,14 @@ function initTrendCategory1() {
             <use xlink:href="#star-solid"></use>
           </svg>${value.rating}</span>
         <span class="price">$${value.price}</span>
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="input-group product-qty">
-            <span class="input-group-btn">
-              <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                data-type="minus" data-field="">
-                <svg width="16" height="16">
-                  <use xlink:href="#minus"></use>
-                </svg>
-              </button>
-            </span>
-            <input type="text" id="quantity" name="quantity" class="form-control input-number" value=1
-              min="1" max="100">
-            <span class="input-group-btn">
-              <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                data-type="plus" data-field="">
-                <svg width="16" height="16">
-                  <use xlink:href="#plus"></use>
-                </svg>
-              </button>
-            </span>
-          </div>
-          <button class="cart-button">
-          <i onclick="addToCard(${key})" class="fa-regular fa-cart-shopping">Add to Cart</i>
+        <br>
+          <div class="d-flex align-items-center justify-content-between">
+            
+          <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
+          <div onclick="addToCard(${key})" ><i class='bx bxs-cart'></i> Add to Cart</div>
         </button>
+          </div>
         </div>
-      </div>
-    </div>
         `;
       trendCategory1.appendChild(newDiv);
     }
@@ -325,33 +267,14 @@ function initTrendCategory2() {
             <use xlink:href="#star-solid"></use>
           </svg>${value.rating}</span>
         <span class="price">$${value.price}</span>
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="input-group product-qty">
-            <span class="input-group-btn">
-              <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                data-type="minus" data-field="">
-                <svg width="16" height="16">
-                  <use xlink:href="#minus"></use>
-                </svg>
-              </button>
-            </span>
-            <input type="text" id="quantity" name="quantity" class="form-control input-number" value=1
-              min="1" max="100">
-            <span class="input-group-btn">
-              <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                data-type="plus" data-field="">
-                <svg width="16" height="16">
-                  <use xlink:href="#plus"></use>
-                </svg>
-              </button>
-            </span>
-          </div>
-          <button class="cart-button">
-          <i onclick="addToCard(${key})" class="fa-regular fa-cart-shopping">Add to Cart</i>
+        <br>
+          <div class="d-flex align-items-center justify-content-between">
+            
+          <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
+          <div onclick="addToCard(${key})" ><i class='bx bxs-cart'></i> Add to Cart</div>
         </button>
+          </div>
         </div>
-      </div>
-    </div>
         `;
       trendCategory2.appendChild(newDiv);
     }
@@ -366,12 +289,14 @@ function addToCard(key) {
     // copy product form list to list card
     listCards[key] = JSON.parse(JSON.stringify(products[key]));
     listCards[key].quantity = 1;
+    reloadCard();
     alert("sepete eklendi");
   } else {
-    listCards[key].quantity += 1; 
+    //listCards[key].quantity += 1; 
+    changeQuantity(key, listCards[key].quantity + 1);
     alert("sepete eklendi");
   }
-  reloadCard();
+  
 }
 
 function reloadCard() {
@@ -400,7 +325,12 @@ function reloadCard() {
               <h6 class="my-0">${value.name}</h6>
               <small class="text-body-secondary">${value.category}</small>
             </div>
-            <span id = "cart-count" class="badge bg-primary rounded-pill">${value.quantity}</span>
+            <div>
+            <button id = "btn-cart-qua" class="badge bg-primary rounded-pill" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+            <span id = "cart-count" class="badge bg-primary rounded-pill">${value.quantity}</span> 
+            <button id="btn-cart-qua" class="badge bg-primary rounded-pill" onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+            </div>
+            
             <span class="text-body-secondary">$${value.price}</span>
           </li>
           `;
@@ -408,7 +338,19 @@ function reloadCard() {
     }
   })
   total.innerText = "$" + totalPrice.toLocaleString();
+  console.log(count);
   quantity.innerHTML = count;
+
+}
+
+function changeQuantity(key, quantity){
+  if(quantity == 0){
+      delete listCards[key];
+  }else{
+      listCards[key].quantity = quantity;
+      listCards[key].price = quantity * products[key].price;
+  }
+  reloadCard();
 }
 
 // popup products 
