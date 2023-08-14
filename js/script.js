@@ -120,7 +120,6 @@
     
     initPreloader();
     initSwiper();
-    //initProductQty();
     initJarallax();
     initChocolat();
 

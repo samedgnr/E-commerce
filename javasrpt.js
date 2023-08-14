@@ -8,6 +8,7 @@ let trendCategory1 = document.getElementById("trend-category1");
 let trendCategory2 = document.getElementById("trend-category2");
 let headerTotal = document.getElementById("cart-total-header");
 
+
 let listCards = [];
 
 let products = [{
@@ -113,31 +114,6 @@ let products = [{
 
 
 
-var initProductQty = function () {
-
-  $('.product-qty').each(function () {
-
-    var $el_product = $(this);
-    var quantity = 0;
-
-    $el_product.find('.quantity-right-plus').click(function (e) {
-      e.preventDefault();
-      var quantity = parseInt($el_product.find('#quantity').val());
-      $el_product.find('#quantity').val(quantity + 1);
-    });
-
-    $el_product.find('.quantity-left-minus').click(function (e) {
-      e.preventDefault();
-      var quantity = parseInt($el_product.find('#quantity').val());
-      if (quantity > 0) {
-        $el_product.find('#quantity').val(quantity - 1);
-      }
-    });
-
-  });
-
-}
-
 function initApp() {
   products.forEach((value, key) => {
     let newDiv = document.createElement('div');
@@ -193,7 +169,7 @@ function initTrend() {
             <use xlink:href="#star-solid"></use>
           </svg>${value.rating}</span>
         <span class="price">$${value.price}</span>
-        <br>
+        
         <div class="d-flex align-items-center justify-content-between">
           
         <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
@@ -229,7 +205,7 @@ function initTrendCategory1() {
             <use xlink:href="#star-solid"></use>
           </svg>${value.rating}</span>
         <span class="price">$${value.price}</span>
-        <br>
+        
           <div class="d-flex align-items-center justify-content-between">
             
           <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
@@ -267,7 +243,7 @@ function initTrendCategory2() {
             <use xlink:href="#star-solid"></use>
           </svg>${value.rating}</span>
         <span class="price">$${value.price}</span>
-        <br>
+        
           <div class="d-flex align-items-center justify-content-between">
             
           <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
@@ -296,14 +272,14 @@ function addToCard(key) {
     changeQuantity(key, listCards[key].quantity + 1);
     alert("sepete eklendi");
   }
-  
+
 }
 
 function reloadCard() {
-  
+
   listCard.innerHTML = '';
   let count = 0;
-  
+
   let totalPrice = 0;
 
   countItem = parseFloat(document.getElementById("cart-count").innerHTML);
@@ -314,7 +290,7 @@ function reloadCard() {
 
     totalPrice = totalPrice + parseFloat(value.price);
 
-    headerTotal.innerHTML = "$" +totalPrice;
+    headerTotal.innerHTML = "$" + totalPrice;
     count = count + value.quantity;
 
     if (value != null) {
@@ -338,17 +314,16 @@ function reloadCard() {
     }
   })
   total.innerText = "$" + totalPrice.toLocaleString();
-  console.log(count);
   quantity.innerHTML = count;
 
 }
 
-function changeQuantity(key, quantity){
-  if(quantity == 0){
-      delete listCards[key];
-  }else{
-      listCards[key].quantity = quantity;
-      listCards[key].price = quantity * products[key].price;
+function changeQuantity(key, quantity) {
+  if (quantity == 0) {
+    delete listCards[key];
+  } else {
+    listCards[key].quantity = quantity;
+    listCards[key].price = quantity * products[key].price;
   }
   reloadCard();
 }
@@ -359,7 +334,7 @@ var sProduct = document.getElementById("s-product");
 function initProduct(key) {
 
   sProduct.innerHTML = ""
-  
+
   let newDiv = document.createElement('div');
   newDiv.classList.add('product');
   newDiv.innerHTML = `
@@ -396,19 +371,8 @@ function initProduct(key) {
           <h3>Description</h3>
           <p>${products[key].desc}</p>
         </div>
+        <br>
         
-        <div class="product-color">
-          <h4>Color</h4>
-          <div class="color-layout">
-            <input type="radio" name="color" value="black" class="color-input">
-            <label for="black" class="black"></label>
-            <input type="radio" name="color" value="red" class="color-input">
-            <label for="red" class="red"></label>
-
-            <input type="radio" name="color" value="blue" class="color-input">
-            <label for="blue" class="blue"></label>
-          </div>
-        </div>
         <span class="divider"></span>
 
         <div class="product-btn-group">
@@ -463,3 +427,44 @@ function popupOpen(key) {
   initProduct(key);
 }
 
+function getCategoryItems() {
+
+  // window.location = "category-page.html";
+  // let categoryitem = document.getElementById("productp-item");
+  // console.log(categoryitem);
+
+
+  // products.forEach((value, key) => {
+  //   let newDiv = document.createElement('div');
+  //   newDiv.classList.add('item');
+  //   newDiv.innerHTML = `
+  //       <div class="row" >
+  //       <div class="product-item">
+  //         <a href="#" class="btn-wishlist"><svg width="24" height="24">
+  //             <use xlink:href="#heart"></use>
+  //           </svg></a>
+  //         <figure>
+  //           <a onclick="popupOpen(${key})" title="Product Title">
+  //             <img src=${value.image} class="tab-image">
+  //           </a>
+  //         </figure>
+  //         <h3>${value.name}</h3>
+  //         <span class="qty">${value.quantity} Unit</span><span class="rating"><svg width="24" height="24"
+  //             class="text-primary">
+  //             <use xlink:href="#star-solid"></use>
+  //           </svg>${value.rating}</span>
+  //         <span class="price">$${value.price}</span>
+          
+  //         <div class="d-flex align-items-center justify-content-between">
+            
+  //         <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
+  //         <div onclick="addToCard(${key})" ><i class='bx bxs-cart'></i> Add to Cart</div>
+  //       </button>
+  //         </div>
+  //       </div>
+  //         `;
+  //   categoryitem.appendChild(newDiv);
+  // })
+
+
+}

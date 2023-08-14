@@ -1600,3 +1600,39 @@ h1,h2,h3,h4,h5,h6 {
 #btn-cart-qua{
   border:none
 }
+
+
+/* product page  */
+
+.blog-sidebar-title{
+	color: black;
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.blog-sidebar-list{
+	color: black;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+.blog-form{
+	background-color: #F4F4F4; 
+	padding: 50px;
+	height: 1000px;
+}
+
+.list-icon{
+	color: black;
+}
+
+
+.product-sidebar-list{
+	color: #242424;
+}
+
+
+.product-page{
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
