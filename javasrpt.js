@@ -471,7 +471,7 @@ function initProduct(key) {
 
         <div class="product-btn-group">
           <div class="button buy-now"><i class='bx bxs-zap'></i> Buy Now</div>
-          <div class="button heart"><i class='bx bxs-cart'></i> Add to Cart</div>
+          <div onclick="addToCard(${key})" class="button heart"><i class='bx bxs-cart'></i> Add to Cart</div>
           <div class="button heart"><i class='bx bxs-heart'></i> Add to Wishlist</div>
         </div>
       </div>
