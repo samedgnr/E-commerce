@@ -56,7 +56,7 @@ let products = [{
 }, {
   id: "4",
   name: "Headphones",
-  price: "40.00",
+  price: "40.50",
   realPrice: "1000.00",
   image: "images/headphones.png",
   image2: "images/laptop.png",
@@ -84,7 +84,7 @@ let products = [{
 }, {
   id: "6",
   name: "Keyboard",
-  price: "20.00",
+  price: "20.75",
   realPrice: "1000.00",
   image: "images/keyboard.png",
   image2: "images/laptop.png",
@@ -120,7 +120,7 @@ function initApp() {
     newDiv.classList.add('item');
     newDiv.innerHTML = `
           <div id=${value.id} class="product-item swiper-slide">
-          <a href="#" class="btn-wishlist"><svg width="24" height="24">
+          <a onclick="addToFavorites(${key})" id = "${value.id}btn-favorites1" class="btn-wishlist"><svg width="24" height="24">
               <use xlink:href="#heart"></use> 
             </svg></a>
           <figure>
@@ -141,7 +141,6 @@ function initApp() {
           </div>
         </div>
           `;
-    trendProduct.appendChild(newDiv);
     shop.appendChild(newDiv);
 
   })
@@ -155,10 +154,10 @@ function initTrend() {
     newDiv.innerHTML = `
       <div class="col" >
       <div class="product-item">
-        <a href="#" class="btn-wishlist"><svg width="24" height="24">
-            <use xlink:href="#heart"></use>
-          </svg></a>
-        <figure>
+      <a onclick="addToFavorites(${key})" id = "${value.id}btn-favorites2" class="btn-wishlist"><svg width="24" height="24">
+      <use xlink:href="#heart"></use> 
+    </svg></a>
+  <figure>
           <a onclick="popupOpen(${key})" title="Product Title">
             <img src=${value.image} class="tab-image">
           </a>
@@ -191,10 +190,10 @@ function initTrendCategory1() {
       newDiv.innerHTML = `
       <div class="col" >
       <div class="product-item">
-        <a href="#" class="btn-wishlist"><svg width="24" height="24">
-            <use xlink:href="#heart"></use>
-          </svg></a>
-        <figure>
+      <a onclick="addToFavorites(${key})" id = "${value.id}btn-favorites4" class="btn-wishlist"><svg width="24" height="24">
+      <use xlink:href="#heart"></use> 
+    </svg></a>
+  <figure>
           <a onclick="popupOpen(${key})" title="Product Title">
             <img src=${value.image} class="tab-image">
           </a>
@@ -229,10 +228,10 @@ function initTrendCategory2() {
       newDiv.innerHTML = `
       <div class="col" >
       <div class="product-item">
-        <a href="#" class="btn-wishlist"><svg width="24" height="24">
-            <use xlink:href="#heart"></use>
-          </svg></a>
-        <figure>
+      <a onclick="addToFavorites(${key})" id ="${value.id}btn-favorites3" class="btn-wishlist"><svg width="24" height="24">
+      <use xlink:href="#heart"></use> 
+    </svg></a>
+  <figure>
           <a onclick="popupOpen(${key})" title="Product Title">
             <img src=${value.image} class="tab-image">
           </a>
@@ -378,7 +377,7 @@ function initProduct(key) {
         <div class="product-btn-group">
           <div class="button buy-now"><i class='bx bxs-zap'></i> Buy Now</div>
           <div onclick="addToCard(${key})" class="button heart"><i class='bx bxs-cart'></i> Add to Cart</div>
-          <div class="button heart"><i class='bx bxs-heart'></i> Add to Wishlist</div>
+          <div onclick="addToFavorites(${key})"  class="button heart"><i class='bx bxs-heart'></i> Add to Wishlist</div>
         </div>
       </div>
     </div>
@@ -454,9 +453,9 @@ function getCategoryItems() {
   //             <use xlink:href="#star-solid"></use>
   //           </svg>${value.rating}</span>
   //         <span class="price">$${value.price}</span>
-          
+
   //         <div class="d-flex align-items-center justify-content-between">
-            
+
   //         <button id = "btn-add-to-card" class="w-100 btn btn-primary btn-sm">
   //         <div onclick="addToCard(${key})" ><i class='bx bxs-cart'></i> Add to Cart</div>
   //       </button>
@@ -466,5 +465,25 @@ function getCategoryItems() {
   //   categoryitem.appendChild(newDiv);
   // })
 
-
+}
+function addToFavorites(key) {
+  if (products[key].isLiked) {
+    products[key].isLiked = false;
+    alert("favorilerden çıkarıldı.");
+    for (let i = 1; i <= 4; i++) {
+      if (document.getElementById(products[key].id + "btn-favorites" + i) != null) {
+        document.getElementById(products[key].id + "btn-favorites" + i).style.backgroundColor = "white";
+        document.getElementById(products[key].id + "btn-favorites" + i).style.color = "#282282";
+      }
+    }
+  } else {
+    products[key].isLiked = true;
+    alert("favorilerde eklendi.");
+    for (let i = 1; i <= 4; i++) {
+      if (document.getElementById(products[key].id + "btn-favorites" + i) != null) {
+        document.getElementById(products[key].id + "btn-favorites" + i).style.backgroundColor = "red";
+        document.getElementById(products[key].id + "btn-favorites" + i).style.color = "white";
+      }
+    }
+  }
 }
